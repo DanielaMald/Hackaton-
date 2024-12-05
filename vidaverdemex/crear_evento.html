@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Evento</title>
+  <link rel="stylesheet" href="./styles/crear_evento.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Formulario para Crear Evento</h2>
+  <form id="eventoForm">
+    <div class="form-group">
+      <label for="titulo">Título del Evento:</label>
+      <input type="text" id="titulo" name="titulo" placeholder="Ingrese el título del evento" required>
+    </div>
+
+    <div class="form-group">
+      <label for="cuerpo">Descripción del Evento:</label>
+      <input type="text" id="cuerpo" name="cuerpo" placeholder="Ingrese la descripción del evento" required>
+    </div>
+
+    <div class="form-group">
+      <label for="fechaInicio">Fecha y Hora de Inicio:</label>
+      <input type="datetime-local" id="fechaInicio" name="fechaInicio" required>
+    </div>
+
+    <div class="form-group">
+      <label for="fechaFin">Fecha y Hora de Fin:</label>
+      <input type="datetime-local" id="fechaFin" name="fechaFin" required>
+    </div>
+
+    <div class="form-group">
+      <label for="imagen">Imagen del Evento:</label>
+      <input type="file" id="imagen" name="imagen" accept="image/*">
+    </div>
+
+    <div class="button-group">
+      <button type="submit">Guardar Evento</button>
+    </div>
+  </form>
+
+  <div class="json-output" id="jsonOutput"></div>
+</div>
+
+<script>
+ // Función para guardar el evento en LocalStorage
+ function guardarEvento(evento) {
+    localStorage.setItem('evento', JSON.stringify(evento));
+  }
+
+  // Mostrar el evento guardado en la pantalla
+  function mostrarEvento() {
+    const eventoGuardado = localStorage.getItem('evento');
+    if (eventoGuardado) {
+      const evento = JSON.parse(eventoGuardado);
+      document.getElementById('jsonOutput').innerText = JSON.stringify(evento, null, 2);
+    } else {
+      document.getElementById('jsonOutput').innerText = 'No hay evento guardado.';
+    }
+  }
+
+  // Escuchar el envío del formulario
+  document.getElementById('eventoForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const titulo = document.getElementById('titulo').value;
+    const cuerpo = document.getElementById('cuerpo').value;
+    const fechaInicio = document.getElementById('fechaInicio').value;
+    const fechaFin = document.getElementById('fechaFin').value;
+    const imagen = document.getElementById('imagen').files[0] ? document.getElementById('imagen').files[0].name : '';
+
+    const evento = {
+      titulo: titulo,
+      cuerpo: cuerpo,
+      fechaInicio: fechaInicio,
+      fechaFin: fechaFin,
+      imagen: imagen
+    };
+
+    // Guardar en LocalStorage
+    guardarEvento(evento);
+
+    // Mostrar el JSON en la pantalla
+    mostrarEvento();
+
+    // Redirigir a eventos.html
+    window.location.href = 'eventos.html';
+  });
+
+  // Mostrar el evento guardado cuando se carga la página
+  mostrarEvento();
+</script>
+
+</body>
+</html>

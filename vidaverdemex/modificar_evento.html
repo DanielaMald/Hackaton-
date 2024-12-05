@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modificar Evento</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    label {
+      font-size: 1.2em;
+      margin: 10px 0;
+      display: block;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Modificar Evento</h2>
+  <form id="form-modificar-evento">
+    <label for="titulo">Título</label>
+    <input type="text" id="titulo" required>
+
+    <label for="cuerpo">Cuerpo</label>
+    <textarea id="cuerpo" required></textarea>
+
+    <label for="fechaInicio">Fecha de Inicio</label>
+    <input type="datetime-local" id="fechaInicio" required>
+
+    <label for="fechaFin">Fecha de Fin</label>
+    <input type="datetime-local" id="fechaFin" required>
+
+    <label for="imagen">Imagen del Evento</label>
+    <input type="file" id="imagen">
+
+    <button type="submit">Guardar Cambios</button>
+  </form>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Obtener los parámetros de la URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const index = urlParams.get('index');
+      const titulo = urlParams.get('titulo');
+      const cuerpo = urlParams.get('cuerpo');
+      const fechaInicio = urlParams.get('fechaInicio');
+      const fechaFin = urlParams.get('fechaFin');
+      const imagen = urlParams.get('imagen');
+
+      // Verificar si los parámetros existen antes de llenar el formulario
+      if (index !== null && titulo && cuerpo && fechaInicio && fechaFin) {
+        // Llenar el formulario con los valores actuales
+        document.getElementById('titulo').value = titulo;
+        document.getElementById('cuerpo').value = cuerpo;
+        document.getElementById('fechaInicio').value = fechaInicio;
+        document.getElementById('fechaFin').value = fechaFin;
+        
+        // Si la imagen existe en los parámetros, podemos mostrarla o guardarla para futuras referencias
+        if (imagen) {
+          console.log('Imagen:', imagen);
+          // Aquí podrías mostrar la imagen si lo deseas, usando una etiqueta <img>
+          // document.getElementById('imagen').src = imagen;
+        }
+      } else {
+        console.log('Faltan parámetros en la URL');
+        alert('No se encontraron todos los parámetros necesarios.');
+      }
+
+      // Manejo del formulario para actualizar el evento
+      document.getElementById('form-modificar-evento').addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Recuperamos los eventos del localStorage
+        const eventos = JSON.parse(localStorage.getItem('eventos')) || [];
+
+        // Actualizar el evento
+        eventos[index] = {
+          titulo: document.getElementById('titulo').value,
+          cuerpo: document.getElementById('cuerpo').value,
+          fechaInicio: document.getElementById('fechaInicio').value,
+          fechaFin: document.getElementById('fechaFin').value,
+          imagen: imagen || ''  // Si no hay imagen seleccionada, mantenemos la anterior
+        };
+
+        // Guardamos los eventos actualizados en el localStorage
+        localStorage.setItem('eventos', JSON.stringify(eventos));
+
+        // Redirigimos a la página de eventos
+        window.location.href = 'eventos.html';
+      });
+    });
+  </script>
+
+</body>
+</html>

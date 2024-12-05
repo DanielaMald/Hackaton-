@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/agregar_recompensas.css"> 
+    <title>Agregar Recompensas</title> 
+</head>
+<body>
+
+    <div class="container">
+        <h2>Agregar Recompensas</h2>
+
+        <!-- Formulario para agregar una nueva recompensa -->
+        <form id="form-agregar-recompensa">
+            <div class="form-group">
+                <label for="recompensa">Recompensa</label>
+                <input type="text" id="recompensa" required>
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripción</label>
+                <textarea id="descripcion" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="puntos">Puntos necesarios</label>
+                <input type="number" id="puntos" required>
+            </div>
+
+            <div class="form-group">
+                <label for="imagen">Imagen de recompensa</label>
+                <input type="file" id="imagen" accept="image/*">
+            </div>
+
+            <div class="buttons">
+                <button type="submit" id="guardar-agregar">Guardar y agregar nueva recompensa</button>
+                <button type="button" id="guardar-salir">Guardar y salir</button>
+            </div>
+        </form>
+
+        <!-- Tabla para mostrar las recompensas -->
+        <table id="tabla-recompensas">
+            <thead>
+                <tr>
+                    <th>Recompensa</th>
+                    <th>Descripción</th>
+                    <th>Puntos necesarios</th>
+                    <th>Imagen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las recompensas se agregarán aquí -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="/js/agregar_recompensas.js"></script>
+</body>
+</html>
