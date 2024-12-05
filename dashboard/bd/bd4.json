@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "nombre": "Juan Pérez",
+        "pregunta1": "si",
+        "pregunta2": "no",
+        "pregunta3": "si",
+        "pregunta4": "si"
+    },
+    {
+        "id": 2,
+        "nombre": "María Gómez",
+        "pregunta1": "si",
+        "pregunta2": "si",
+        "pregunta3": "no",
+        "pregunta4": "si"
+    },
+    {
+        "id": 3,
+        "nombre": "Carlos Martínez",
+        "pregunta1": "si",
+        "pregunta2": "si",
+        "pregunta3": "si",
+        "pregunta4": "no"
+    },
+    {
+        "id": 4,
+        "nombre": "Ana Rodríguez",
+        "pregunta1": "no",
+        "pregunta2": "si",
+        "pregunta3": "si",
+        "pregunta4": "si"
+    },
+    {
+        "id": 5,
+        "nombre": "Luis Fernández",
+        "pregunta1": "si",
+        "pregunta2": "si",
+        "pregunta3": "si",
+        "pregunta4": "si"
+    },
+    {
+        "id": 6,
+        "nombre": "Laura López",
+        "pregunta1": "si",
+        "pregunta2": "si",
+        "pregunta3": "si",
+        "pregunta4": "si"
+    },
+    {
+        "id": 7,
+        "nombre": "Pedro Sánchez",
+        "pregunta1": "si",
+        "pregunta2": "si",
+        "pregunta3": "si",
+        "pregunta4": "si"
+    },
+    {
+        "id": 8,
+        "nombre": "Carmen Díaz",
+        "pregunta1": "si",
+        "pregunta2": "si",
+        "pregunta3": "si",
+        "pregunta4": "si"
+    },
+    {
+        "id": 9,
+        "nombre": "Jorge García",
+        "pregunta1": "si",
+        "pregunta2": "si",
+        "pregunta3": "si",
+        "pregunta4": "si"
+    }
+]

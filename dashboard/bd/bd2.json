@@ -1,0 +1,49 @@
+[
+    {
+        "id": 1,
+        "nombre": "Juan Pérez",
+        "asistencia": 35
+    },
+    {
+        "id": 2,
+        "nombre": "María Gómez",
+        "asistencia": 40
+    },
+    {
+        "id": 3,
+        "nombre": "Carlos Martínez",
+        "asistencia": 30
+    },
+    {
+        "id": 4,
+        "nombre": "Ana Rodríguez",
+        "asistencia": 45
+    },
+    {
+        "id": 5,
+        "nombre": "Luis Fernández",
+        "asistencia": 25
+    },
+    {
+        "id": 6,
+        "nombre": "Laura López",
+        "asistencia": 35
+    },
+    {
+        "id": 7,
+        "nombre": "Pedro Sánchez",
+        "asistencia": 40
+    },
+    {
+        "id": 8,
+        "nombre": "Carmen Díaz",
+        "asistencia": 30
+    },
+    {
+        "id": 9,
+        "nombre": "Jorge García",
+        "asistencia": 45
+    }
+]
+
+

@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "nombre": "Juan Pérez",
+        "puntos": 7
+    },
+    {
+        "id": 2,
+        "nombre": "María Gómez",
+        "puntos": 4
+    },
+    {
+        "id": 3,
+        "nombre": "Carlos Martínez",
+        "puntos": 3
+    },
+    {
+        "id": 4,
+        "nombre": "Ana Rodríguez",
+        "puntos": 4
+    },
+    {
+        "id": 5,
+        "nombre": "Luis Fernández",
+        "puntos": 2
+    },
+    {
+        "id": 6,
+        "nombre": "Laura López",
+        "puntos": 3
+    },
+    {
+        "id": 7,
+        "nombre": "Pedro Sánchez",
+        "puntos": 4
+    },
+    {
+        "id": 8,
+        "nombre": "Carmen Díaz",
+        "puntos": 3
+    },
+    {
+        "id": 9,
+        "nombre": "Jorge García",
+        "puntos": 6
+    }
+]
