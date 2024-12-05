@@ -1,0 +1,286 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra de navegación */
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+/* Mapa container */
+#map {
+    width: 80%; /* Ajusta el ancho, 80% de la pantalla */
+    height: 300px; /* Ajusta la altura del mapa */
+    margin: 0 auto; /* Centra el mapa en la página */
+}
+
+/* Info containers */
+#info-containers {
+    display: flex;
+    justify-content: center; /* Centra los contenedores */
+    gap: 20px;
+    padding: 20px;
+}
+
+.info-item {
+    width: 200px; /* Tamaño específico de los contenedores */
+    background-color: #28a745; /* Verde para el contorno */
+    color: #333333; /* Cambié el texto a gris oscuro para mejor visibilidad */
+    border-radius: 20px; /* Bordes curvos */
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Cuando pasa el mouse sobre el contenedor */
+.info-item h3 {
+    color: #333333; /* Gris oscuro para el texto del título */
+    margin: 0;
+}
+
+/* Cambiar el color del texto y fondo cuando se pasa el mouse */
+.info-item:hover {
+    background-color: #b4df16; /* Amarillo cuando se pasa el mouse */
+    transform: translateY(-10px) scale(1.05); /* Efecto de expansión y elevación del contenedor */
+    text-align: center; /* Asegura que el texto esté centrado al pasar el mouse */
+}
+
+/* El contenedor se moverá hacia el centro cuando pasa el mouse */
+.info-item:hover {
+    transform: scale(1.05) translateY(-10px); /* Expande el contenedor y lo mueve ligeramente hacia arriba */
+}
+
+/* Cambiar color del título al pasar el mouse */
+.info-item:hover h3 {
+    color: #1e3d58; /* Azul oscuro cuando pasa el mouse */
+}
+
+/* Estilo para los botones */
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    background-color: #007bff;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.navbar-nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Efecto al pasar el mouse sobre los items de la barra */
+.navbar-nav .nav-item:hover {
+    background-color: #0056b3;
+}
+
+/* Efecto para los items de la tarjeta */
+.card {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta el tamaño ligeramente al pasar el mouse */
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+/* Estilo para las popups que aparecen al pasar el mouse */
+.popup {
+    display: none; /* Inicialmente no se muestra */
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-item:hover .popup {
+    display: block;
+}
+/* Contenedor que alinea el botón */
+.container {
+    display: flex; /* Activa flexbox */
+    justify-content: flex-end; /* Mueve el contenido hacia la derecha */
+    align-items: left; /* Centra verticalmente si hay otros elementos */
+    width: 100%; /* Asegura que ocupe toda la fila */
+}
+/* Botón estilo personalizado */
+.styled-button {
+    margin: 10px auto; /* Centrar el botón */
+    position: relative;
+    padding: 0px 0px; /* Tamaño del botón */
+    width: 120px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: #ff0000; /* Azul primario */
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    overflow: hidden;
+    margin-right: 200px; /* Separación opcional del borde derecho */
+    transition: 0.5s ease-in-out;
+    border-radius: 15px; /* Bordes ligeramente redondeados */
+    display: inline-block; /* Asegura que se ajuste al contenido */
+}
+
+.styled-button:hover {
+    background: #569ae2; /* Azul más oscuro al pasar el mouse */
+    color: #fff; /* Asegura que el texto sea visible */
+}
+
+/* Animación para las líneas */
+.styled-button span {
+    position: absolute;
+    background: #fff;
+    transition: 0.5s;
+}
+
+.styled-button span:nth-child(1) {
+    width: 100%;
+    height: 2px;
+    top: 0;
+    left: -100%;
+}
+
+.styled-button span:nth-child(2) {
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    right: -100%;
+}
+
+.styled-button span:nth-child(3) {
+    width: 2px;
+    height: 100%;
+    bottom: -100%;
+    left: 0;
+}
+
+.styled-button span:nth-child(4) {
+    width: 2px;
+    height: 100%;
+    top: -100%;
+    right: 0;
+}
+
+/* Efecto hover en las líneas */
+.styled-button:hover span:nth-child(1) {
+    left: 0;
+}
+
+.styled-button:hover span:nth-child(2) {
+    right: 0;
+}
+
+.styled-button:hover span:nth-child(3) {
+    bottom: 0;
+}
+
+.styled-button:hover span:nth-child(4) {
+    top: 0;
+}
+.popup {
+    font-family: 'Georgia', serif;  /* Fuente más elegante */
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .popup-container {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    gap: 8px; /* Espacio entre los elementos */
+  }
+  
+  .popup .description, .popup .address {
+    font-style: italic; /* Cursiva */
+    font-family: 'Roboto', sans-serif; /* Fuente moderna */
+    color: #666; /* Color gris para texto secundario */
+  }
+  
+  .popup strong {
+    font-family: 'Arial', sans-serif; /* Fuente sans-serif para el nombre */
+    font-weight: bold;
+    color: #2c3e50; /* Color para el nombre */
+  }
+ /* Cambiar el color de fondo de la barra de navegación y agregar transiciones */
+.custom-navbar {
+    background-color: #4CAF50; /* Color verde */
+    transition: background-color 0.3s ease; /* Transición para el cambio de color */
+  }
+  
+  /* Estilo del logo */
+  .navbar-logo {
+    height: 70px; /* Ajusta el tamaño del logo según sea necesario */
+    width: auto;
+    transition: transform 0.3s ease; /* Añadimos la transición para el logo */
+  }
+  
+  /* Estilo del título en la barra de navegación */
+  .custom-title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: white; /* Color blanco para el texto */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    transition: color 0.3s ease, transform 0.3s ease; /* Transición para el color y el transform */
+  }
+  
+  /* Efecto cuando se pasa el ratón sobre el título */
+  .custom-title:hover {
+    color: #ffeb3b; /* Color dorado */
+    text-decoration: underline;
+    transform: scale(1.1); /* Efecto de agrandamiento */
+  }
+  
+  /* Efecto cuando se pasa el ratón sobre el logo */
+  .navbar-logo:hover {
+    transform: scale(1.1); /* Efecto de agrandamiento */
+  }
+  
+  /* Efecto de cambio de fondo en la barra cuando el usuario hace scroll */
+  .scrolled .custom-navbar {
+    background-color: #63cc67; /* Fondo verde más oscuro cuando se hace scroll */
+  }
+  
+  /* Efecto suave en los enlaces de la barra de navegación */
+  .navbar-nav .nav-link {
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #ffeb3b; /* Color dorado al pasar el ratón */
+  }
+  
