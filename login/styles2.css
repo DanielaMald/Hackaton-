@@ -1,0 +1,159 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif; /* Cambié a una fuente más moderna */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('assets/logito.jpg'); /* Ruta de tu imagen */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.login-form {
+    background: rgba(0, 0, 0, 0.3); /* Fondo más oscuro para mejor contraste */
+    color: white; /* Color del texto blanco */
+    padding: 40px;
+    border-radius: 15px; /* Bordes redondeados más suaves */
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif; /* Tipografía personalizada */
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem; /* Tamaño de letra mayor para el título */
+    font-weight: 600; /* Negrita para el título */
+    text-transform: uppercase; /* Título en mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra suave para el título */
+    font-style: italic; /* Hacer el título en cursiva */
+}
+
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave en inputs */
+}
+
+input[type="email"]:focus, input[type="password"]:focus {
+    border: 2px solid #FF8C00; /* Cambio de color al hacer focus */
+    box-shadow: 0 0 8px rgba(255, 140, 0, 0.6); /* Resalta el input */
+}
+
+.btn-login {
+    background-color: #FF8C00;
+    color: black;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1.2rem; /* Tamaño de fuente más grande */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+.btn-login:hover {
+    background-color: #e67e00; /* Color de fondo más oscuro en hover */
+}
+
+.social-login {
+    margin-top: 20px;
+}
+
+.btn-social {
+    background-color: #ddd;
+    color: black;
+    padding: 10px;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-social:hover {
+    background-color: #cfcfcf; /* Efecto hover más claro */
+}
+
+a {
+    color: #FF8C00;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Puntos de quiebre para responsividad */
+
+/* Para pantallas pequeñas (tabletas y teléfonos grandes) */
+@media (max-width: 768px) {
+    .login-form {
+        width: 90%;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2rem; /* Reduce el tamaño del título */
+    }
+}
+
+/* Para pantallas muy pequeñas (teléfonos) */
+@media (max-width: 480px) {
+    .login-form {
+        width: 95%;
+        padding: 20px;
+        border-radius: 10px; /* Ajusta el borde para que sea menos pronunciado */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Reduce aún más el tamaño del título */
+        letter-spacing: 1px; /* Reduce el espaciado entre letras */
+    }
+
+    input[type="email"], input[type="password"] {
+        font-size: 0.9rem; /* Reduce el tamaño del texto en inputs */
+    }
+
+    .btn-login {
+        font-size: 1rem; /* Ajusta el tamaño del botón */
+        padding: 10px;
+    }
+
+    .btn-social {
+        font-size: 0.9rem; /* Ajusta el tamaño de los botones sociales */
+        padding: 8px;
+    }
+}
+
+/* Para pantallas extra grandes (monitores grandes) */
+@media (min-width: 1200px) {
+    .login-form {
+        width: 400px; /* Amplía el contenedor en pantallas más grandes */
+    }
+
+    h1 {
+        font-size: 3rem; /* Aumenta el tamaño del título */
+    }
+}
